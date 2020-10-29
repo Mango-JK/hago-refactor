@@ -1,5 +1,8 @@
+
 HELP.md
 .gradle
+.idea
+resources/application.yml
 build/
 !gradle/wrapper/gradle-wrapper.jar
 !**/src/main/**/build/
@@ -13,9 +16,6 @@ build/
 .settings
 .springBeans
 .sts4-cache
-bin/
-!**/src/main/**/bin/
-!**/src/test/**/bin/
 
 ### IntelliJ IDEA ###
 .idea
@@ -35,3 +35,7 @@ out/
 
 ### VS Code ###
 .vscode/
+src/main/resources/static/
+src/main/resources/templates/
+src/main/resources/application.yml
+src/main/resources/application.properties

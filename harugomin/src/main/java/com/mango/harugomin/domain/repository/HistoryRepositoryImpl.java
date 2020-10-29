@@ -1,8 +1,8 @@
 package com.mango.harugomin.domain.repository;
 
+import com.mango.harugomin.domain.entity.QHistory;
 import com.querydsl.jpa.impl.JPAQueryFactory;
 import lombok.RequiredArgsConstructor;
-import static com.mango.harugomin.domain.entity.QHistory.history;
 
 @RequiredArgsConstructor
 public class HistoryRepositoryImpl implements HistoryRepositoryCustom {
@@ -11,6 +11,9 @@ public class HistoryRepositoryImpl implements HistoryRepositoryCustom {
 
     @Override
     public void deleteAllByUsers(Long userId) {
-        queryFactory.delete(history).where(history.user.userId.eq(userId)).execute();
+        queryFactory
+                .delete(QHistory.history)
+                .where(QHistory.history.user.userId.eq(userId))
+                .execute();
     }
 }
